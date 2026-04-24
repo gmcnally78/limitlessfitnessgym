@@ -39,22 +39,15 @@
 <!-- LINKS -->
 	<!-- To stylesheets and scripts, custom styles should always be last in order -->
 	<link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 
 
 	<!--tells the search engine this is the permalink -->
 	<link rel="canonical" href="https://example.com/index.html">
 
-	<!--Tells the browser to display this rather than the current page URL -->
-	<link rel="shortlink" href="">
-
-	<!-- Tells the browser and search engine there are multiple languages of this page available-->
-	<link rel="alternate" hreflang="en" href="">
 
 	<!-- Gives credit to the author -->
 	<link rel="author" href="https://example.com">
-
-	<!-- license or authorizations for the page-->
-  <link rel="license" href="https://www.gnu.org/licenses/gpl-3.0.html">
 
 
 <!-- TITLE -->	
@@ -64,6 +57,7 @@
 </head>
 <body>
 <!-- add a skip link that skips to the main content -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- add correct heading levels -->
   <header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="75" height="75" stroke-width="1.5">
@@ -75,13 +69,17 @@
       <path d="M18 8h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2"></path>
       <path d="M22 12h-1"></path>
     </svg> 
-    Transform Your Life at Limitless Fitness
+    <h1>Transform Your Life at Limitless Fitness</h1>
     <p>Unleash your strength, embrace the challenge, and join a community dedicated to your fitness journey.</p>
     <a href="#">Join Now</a>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-    
-      src="images/facility.jpg"
+    <!-- src="images/facility.jpg" -->
+    <picture>
+      <source media="(min-width: 1024px)" srcset="images/facility-l.jpg">
+      <source media="(min-width: 600px)" srcset="images/facility-m.jpg">
+      <img src="images/facility-s.jpg" alt="Interior view of Limitless Fitness gym with modern equipment">
+    </picture>
 
   </header>
   <nav>
@@ -95,7 +93,7 @@
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-  <main>
+  <main id="main-content">
     <section>
       About Us
       <p>Welcome to Limitless Fitness, where fitness meets community. Our state-of-the-art facility is designed to inspire and support you at every stage of your journey. Whether you're a beginner or a seasoned athlete, our expert trainers and diverse classes provide the perfect environment to achieve your personal best.</p>
@@ -121,7 +119,12 @@
       </ul>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-        src="images/classes.jpg"
+        <!-- src="images/classes.jpg" -->
+        <picture>
+          <source media="(min-width: 1024px)" srcset="images/classes-l.jpg">
+          <source media="(min-width: 600px)" srcset="images/classes-m.jpg">
+          <img src="images/classes-s.jpg" alt="Group fitness class performing high intensity interval training">
+        </picture>
 
     </section>
     <section>
@@ -133,7 +136,12 @@
       <a href="#">Book a Free Consultation today!</a>
 <!-- add alt text where necessary -->
 <!-- add responsive images for resolution switching -->
-        src="images/dumbells.jpg"
+        <!-- src="images/dumbells.jpg" -->
+        <picture>
+          <source media="(min-width: 1024px)" srcset="images/dumbells-l.jpg">
+          <source media="(min-width: 600px)" srcset="images/dumbells-m.jpg">
+          <img src="images/dumbells-s.jpg" alt="Personal trainer assisting a client with dumbbell strength training">
+        </picture>
 
     </section>
     <section>
