@@ -39,15 +39,12 @@
 <!-- LINKS -->
 	<!-- To stylesheets and scripts, custom styles should always be last in order -->
 	<link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
+  
 
 
 	<!--tells the search engine this is the permalink -->
 	<link rel="canonical" href="https://example.com/index.html">
 
-
-	<!-- Gives credit to the author -->
-	<link rel="author" href="https://example.com">
 
 
 <!-- TITLE -->	
@@ -85,20 +82,20 @@
   <nav>
     <h2>Main Navigation</h2>
     <ul>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Classes</a></li>
-      <li><a href="#">Personal Training</a></li>
-      <li><a href="#">Membership Options</a></li>
-      <li><a href="#">Testimonials</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#personal-training">Personal Training</a></li>
+      <li><a href="#membership-options">Membership Options</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   <main id="main-content">
-    <section>
+    <section id="about-us">
       <h2>About Us</h2>
       <p>Welcome to Limitless Fitness, where fitness meets community. Our state-of-the-art facility is designed to inspire and support you at every stage of your journey. Whether you're a beginner or a seasoned athlete, our expert trainers and diverse classes provide the perfect environment to achieve your personal best.</p>
       <section>
-        <h2>What Sets Us Apart</h2>
+        <h3>What Sets Us Apart</h3>
         <ul>
           <li>Personalized Training: Customized workout plans tailored to your goals.</li>
           <li>Top-of-the-Line Equipment: The latest gear to ensure effective and safe workouts.</li>
@@ -107,7 +104,7 @@
         </ul>
       </section>
     </section>
-    <section>
+    <section id="classes">
       <h2>Our Classes</h2>
       <p>Discover a wide variety of classes designed to challenge and energize you.</p>
       <ul>
@@ -127,7 +124,7 @@
         </picture>
 
     </section>
-    <section>
+    <section id="personal-training">
       <h2>Personal Training</h2>
       <p>
         Take your fitness to the next level with our one-on-one training sessions. Our certified trainers work with you to create a customized plan that fits your lifestyle and targets your specific goals.
@@ -144,7 +141,7 @@
         </picture>
 
     </section>
-    <section>
+    <section id="membership-options">
       <h2>Membership Options</h2>
       <p>At Limitless Fitness, we offer flexible membership plans to suit your needs.</p>
       <ul>
@@ -156,7 +153,59 @@
         <h3>Join Limitless Fitness Today!</h3>
         <p>Fill out the form below to kickstart your fitness journey:</p>
 <!--add accessibility to the form-->
-        Full Name
+<p id="paragraph">Required<span>*</span></p>
+<form action="https://wp.zybooks.com/form-viewer.php" method="post">
+
+  <label for="fullname">Full Name<span class="required">*</span></label>
+  <input
+  type="text"
+  id="fullname"
+  name="fullname"
+  required
+  oninvalid="this.setCustomValidity('Please type your name')"
+  oninput="this.setCustomValidity('')"
+>
+
+<label for="email">Email Address<span class="required">*</span> </label>
+<input
+  type="email"
+  id="email"
+  name="email"
+  required
+  oninvalid="this.setCustomValidity('Please type your email')"
+  oninput="this.setCustomValidity('')"
+>
+<label for="phone">
+  Phone Number:<span class="required">*</span>
+</label>
+<input
+  type="tel"
+  id="phone"
+  name="phone"
+  required
+  oninvalid="this.setCustomValidity('Please type your phone number')"
+  oninput="this.setCustomValidity('')"
+>
+
+<label for="gym-membership"
+              >Gym Membership<span class="required">*</span></label
+            >
+          <fieldset id="membership">
+            <legend>Gym Membership<span class="required">*</span></legend>
+            <select id="gym-membership" name="gym-membership" required oninvalid="this.setCustomValidity('Please choose a membership option')"
+            oninput="this.setCustomValidity('')">
+              <option value="">--Select A Membership Option--</option>
+              <option value="Monthly">Monthly Membership</option>
+              <option value="Annual">Annual Membership</option>
+              <option value="Family">Family & Group Plans</option>
+              
+            </select>
+          </fieldset>
+            <label for="fitness-goals">Tell us about your fitness goals: (optional)</label>
+            <textarea id="fitness-goals" name="fitness-goals"></textarea>
+            <input type="submit" value="Submit">
+</form>
+        <!-- Full Name
         Email Address
         Phone Number
         Membership Type
@@ -165,11 +214,11 @@
           Annual Membership
           Family & Group Plans
         Tell us about your fitness goals:
-        Submit
+        Submit -->
       </section>
     </section>
   </main>
-  <aside>
+  <aside id="testimonials">
     <h2>Testimonials</h2>
     <q>
       Joining Limitless Fitness has completely transformed my approach to fitness. The supportive community and expert guidance have made all the difference! - Alex R.
@@ -199,7 +248,7 @@
         </li>
       </ul>
     </section>
-    <section>
+    <section id="contact">
       <h2>Contact Us</h2>
       <address>
         <p>1234 HIIT St. <br>
@@ -208,5 +257,6 @@
       </address>
     </section>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
